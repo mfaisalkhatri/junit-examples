@@ -15,15 +15,18 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
+import org.junit.jupiter.api.TestMethodOrder;
 
 /**
  * @author Faisal Khatri
  * @since 10/25/2022
  **/
+
 public class LambdaTestEcommerceWebsiteTest {
 
     private static String registeredEmail = null;
@@ -54,6 +57,7 @@ public class LambdaTestEcommerceWebsiteTest {
 
     @Nested
     @DisplayName ("Login Functionality Tests")
+    @TestMethodOrder (MethodOrderer.OrderAnnotation.class)
     class Login {
 
         private LoginPage loginPage;
@@ -70,7 +74,7 @@ public class LambdaTestEcommerceWebsiteTest {
         @DisplayName ("Should not allow logging in user with Invalid Username")
         @Order(1)
         void testLoginWithInvalidUsername () {
-            loginPage.loginIntoWebsite ("tester_invalid_username@gmail.com", password);
+            loginPage.loginIntoWebsite ("test_invalid_username@gmail.com", password);
             assertEquals ("Warning: No match for E-Mail Address and/or Password.", loginPage.getFailedLoginWarning ());
         }
 
