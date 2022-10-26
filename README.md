@@ -6,20 +6,24 @@
 
 - This repo contains automation tests for Junit 5 Unit testing framework.
 - This project uses Maven as build tool and JUnit 5 framework to run the tests.
-- [LambdaTest E-Commerce Playground][lambdatestecommerceplayground] websites is used for running the demo tests.
+- [LambdaTest E-Commerce Playground][lambdatestecommerceplayground] website is used for running the demo tests.
 
 ## Running the Tests
 
-By default, tests would be running on LambdaTest Platform. 
+By default, tests would be running on LambdaTest Platform on Chrome Browser.
 
-- To run the test from command line use the following command:
+1. To run the test from command line use the following command:
 
-    `mvn clean install -Dusername=<LambdaTest username> -DaccessKey<LambdaTest access key>`
+    - `mvn clean install -Dusername=<LambdaTest username> -DaccessKey<LambdaTest access key>`
 
-- To run the tests using JUnit 5: 
-  1. In the Run Configuration add the LambdaTest username and access key in the VM option as follows:
-      `-Dusername=<LambdaTest username> -DaccessKey<LambdaTest access key>`
-  2. Run the tests using JUnit Configuration by using the menu `Run >> Edit configurations >> JUnit` in IntelliJ.
+2. To run the tests using JUnit 5 in intelliJ:
+
+    - Open Run Configuration menu using the `Run >> Edit configurations >> JUnit` menu and add the LambdaTest
+      username and access key in the VM option as follows:
+      -Dusername = <LambdaTest username>
+      -DaccessKey = <LambdaTest access key>
+
+    - Click on Apply and OK to start running the tests.
 
 🧬 Need Assistance?
 
@@ -34,3 +38,5 @@ By default, tests would be running on LambdaTest Platform.
 [website]: https://mfaisalkhatri.github.io
 
 [medium]: https://medium.com/@iamfaisalkhatri
+
+[lambdatestecommerceplayground]: https://ecommerce-playground.lambdatest.io/
