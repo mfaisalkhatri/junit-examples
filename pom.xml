@@ -70,15 +70,8 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>test</goal>
-                        </goals>
-                    </execution>
-                </executions>
                 <configuration>
-                    <argLine>-Dfile.encoding=UTF-8 -Xdebug -Xnoagent</argLine>
+                    <includes>**/*Test*.java</includes>
                 </configuration>
             </plugin>
         </plugins>

@@ -20,11 +20,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
  * @since 10/25/2022
  **/
 public class DriverManager {
-    private static final ThreadLocal<WebDriver> DRIVER   = new ThreadLocal<> ();
-    private static final String GRID_URL        = "@hub.lambdatest.com/wd/hub";
-    private static final Logger LOG             = LogManager.getLogger ("DriverManager.class");
-    private static final String LT_ACCESS_TOKEN = System.getProperty ("accessKey");
-    private static final String LT_USERNAME     = System.getProperty ("username");
+    private static final ThreadLocal<WebDriver> DRIVER          = new ThreadLocal<> ();
+    private static final Logger                 LOG             = LogManager.getLogger ("DriverManager.class");
+    private static final String                 GRID_URL        = "@hub.lambdatest.com/wd/hub";
+    private static final String                 LT_ACCESS_TOKEN = System.getProperty ("accessKey");
+    private static final String                 LT_USERNAME     = System.getProperty ("username");
 
     public static void createDriver () {
         setupChromeInLambdaTest ();

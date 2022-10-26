@@ -71,7 +71,7 @@ public class LambdaTestEcommerceWebsiteTest {
 
         @Test
         @DisplayName ("Should not allow logging in user with Invalid Username")
-        @Order(1)
+        @Order (1)
         void testLoginWithInvalidUsername () {
             loginPage.loginIntoWebsite ("test_invalid_username@gmail.com", password);
             assertEquals ("Warning: No match for E-Mail Address and/or Password.", loginPage.getFailedLoginWarning ());
@@ -79,7 +79,7 @@ public class LambdaTestEcommerceWebsiteTest {
 
         @Test
         @DisplayName ("Should not allow logging in user with Invalid Password")
-        @Order(2)
+        @Order (2)
         void testLoginWithInvalidPassword () {
             loginPage.loginIntoWebsite (registeredEmail, "InvalidPassword");
             assertEquals ("Warning: No match for E-Mail Address and/or Password.", loginPage.getFailedLoginWarning ());
@@ -88,7 +88,7 @@ public class LambdaTestEcommerceWebsiteTest {
 
         @Test
         @DisplayName ("Should not allow logging in user by keeping Username and Password fields blank")
-        @Order(3)
+        @Order (3)
         void testLoginWithBlankUsernameAndPassword () {
             loginPage.loginIntoWebsite (" ", " ");
             assertEquals ("Warning: No match for E-Mail Address and/or Password.", loginPage.getFailedLoginWarning ());
@@ -97,7 +97,7 @@ public class LambdaTestEcommerceWebsiteTest {
 
         @Test
         @DisplayName ("Should allow logging in with Valid credentials")
-        @Order(4)
+        @Order (4)
         void testLoginWithValidCredentials () {
             loginPage.loginIntoWebsite (registeredEmail, password);
             AccountPage accountPage = new AccountPage ();

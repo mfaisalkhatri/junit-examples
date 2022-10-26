@@ -14,7 +14,7 @@ By default, tests would be running on LambdaTest Platform on Chrome Browser.
 
 1. To run the test from command line use the following command:
 
-    - `mvn clean install -Dusername=<LambdaTest username> -DaccessKey<LambdaTest access key>`
+    - `mvn test -Dusername=<LambdaTest username> -DaccessKey<LambdaTest access key>`
 
 2. To run the tests using JUnit 5 in intelliJ:
 
