@@ -32,11 +32,21 @@ public class SimpleFormPage {
 
     }
 
-    private WebElement fieldB () {
+    private WebElement fieldB ( ) {
         return getDriver ().findElement (By.id ("sum2"));
     }
 
     private WebElement getValuesBtn() {
         return getDriver ().findElement (By.cssSelector ("#gettotal > button"));
+    }
+
+    public void getSumOfTwoNumbers(String numberOne, String numberTwo) {
+        fieldA ().sendKeys (numberOne);
+        fieldB ().sendKeys (numberTwo);
+        getValuesBtn ().click ();
+    }
+
+    public String getResultText () {
+        return getDriver ().findElement (By.id("addmessage")).getText ();
     }
 }

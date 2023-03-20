@@ -4,19 +4,14 @@ import static java.text.MessageFormat.format;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.HashMap;
-import java.util.Objects;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 /**
@@ -32,8 +27,7 @@ public class DriverManager {
 
     public static void createDriver () {
         //setupChromeInRemote ();
-        setupChrome ();
-        setupBrowserTimeouts ();
+        setupEdge ();
     }
 
     public static <D extends WebDriver> D getDriver () {
@@ -65,8 +59,9 @@ public class DriverManager {
             .scriptTimeout (Duration.ofSeconds (30));
     }
 
-    private static void setupChrome() {
+    private static void setupEdge () {
         setDriver (new EdgeDriver ());
+        setupBrowserTimeouts ();
     }
 
     private static void setupChromeInRemote () {
@@ -90,6 +85,7 @@ public class DriverManager {
         } catch (final MalformedURLException e) {
             LOG.error ("Error setting up chrome browser in LambdaTest", e.getMessage ());
         }
+        setupBrowserTimeouts ();
     }
 
     private DriverManager () {
