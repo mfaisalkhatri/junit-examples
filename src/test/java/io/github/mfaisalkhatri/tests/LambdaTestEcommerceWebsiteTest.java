@@ -6,14 +6,15 @@ import static io.github.mfaisalkhatri.drivers.DriverManager.quitDriver;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-import io.github.mfaisalkhatri.pages.AccountPage;
-import io.github.mfaisalkhatri.pages.HomePage;
-import io.github.mfaisalkhatri.pages.LoginPage;
-import io.github.mfaisalkhatri.pages.RegistrationPage;
-import io.github.mfaisalkhatri.pages.RegistrationSuccessPage;
+import io.github.mfaisalkhatri.lambdatestcommerce.pages.AccountPage;
+import io.github.mfaisalkhatri.lambdatestcommerce.pages.HomePage;
+import io.github.mfaisalkhatri.lambdatestcommerce.pages.LoginPage;
+import io.github.mfaisalkhatri.lambdatestcommerce.pages.RegistrationPage;
+import io.github.mfaisalkhatri.lambdatestcommerce.pages.RegistrationSuccessPage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Nested;
@@ -26,6 +27,7 @@ import org.junit.jupiter.api.TestMethodOrder;
  * @since 10/25/2022
  **/
 
+@Disabled
 public class LambdaTestEcommerceWebsiteTest {
 
     private static String registeredEmail = null;

@@ -12,7 +12,11 @@ import java.util.Objects;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 /**
@@ -27,7 +31,8 @@ public class DriverManager {
     private static final String                 LT_USERNAME     = System.getProperty ("username");
 
     public static void createDriver () {
-        setupChromeInLambdaTest ();
+        //setupChromeInRemote ();
+        setupChrome ();
         setupBrowserTimeouts ();
     }
 
@@ -60,7 +65,11 @@ public class DriverManager {
             .scriptTimeout (Duration.ofSeconds (30));
     }
 
-    private static void setupChromeInLambdaTest () {
+    private static void setupChrome() {
+        setDriver (new EdgeDriver ());
+    }
+
+    private static void setupChromeInRemote () {
         final ChromeOptions browserOptions = new ChromeOptions ();
         browserOptions.setPlatformName ("Windows 10");
         browserOptions.setBrowserVersion ("107.0");
