@@ -10,6 +10,7 @@ import java.util.HashMap;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -27,11 +28,11 @@ public class DriverManager {
 
     public static void createDriver () {
         //setupChromeInRemote ();
-        setupEdge ();
+        setupChrome ();
     }
 
-    public static <D extends WebDriver> D getDriver () {
-        return (D) DriverManager.DRIVER.get ();
+    public static WebDriver getDriver () {
+        return DriverManager.DRIVER.get ();
     }
 
     public static void quitDriver () {
@@ -59,8 +60,10 @@ public class DriverManager {
             .scriptTimeout (Duration.ofSeconds (30));
     }
 
-    private static void setupEdge () {
-        setDriver (new EdgeDriver ());
+    private static void setupChrome () {
+        ChromeOptions chromeOptions = new ChromeOptions ();
+        chromeOptions.addArguments("--remote-allow-origins=*");
+        setDriver (new ChromeDriver (chromeOptions));
         setupBrowserTimeouts ();
     }
 
@@ -83,7 +86,7 @@ public class DriverManager {
                 new RemoteWebDriver (new URL (format ("https://{0}:{1}{2}", LT_USERNAME, LT_ACCESS_TOKEN, GRID_URL)),
                     browserOptions));
         } catch (final MalformedURLException e) {
-            LOG.error ("Error setting up chrome browser in LambdaTest", e.getMessage ());
+            LOG.error ("Error setting up chrome browser in LambdaTest");
         }
         setupBrowserTimeouts ();
     }
