@@ -1,4 +1,4 @@
-package io.github.mfaisalkhatri.tests;
+package io.github.mfaisalkhatri.tests.unittests;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -6,17 +6,13 @@ import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
-import org.junit.jupiter.api.condition.DisabledIf;
-import org.junit.jupiter.api.condition.DisabledOnJre;
-import org.junit.jupiter.api.condition.JRE;
 
 /**
  * @author Faisal Khatri
  * @since 11/4/2022
  **/
-@DisabledOnJre (JRE.JAVA_15)
 @TestInstance (TestInstance.Lifecycle.PER_CLASS)
-public class SampleClass {
+public class SampleClassTest {
 
     @BeforeAll
     public void beforeAllTest () {
