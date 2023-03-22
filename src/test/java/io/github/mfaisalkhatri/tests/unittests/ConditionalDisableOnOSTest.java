@@ -17,7 +17,7 @@ public class ConditionalDisableOnOSTest {
     public void unitTestOne() {
         System.out.println ("This is unit test one!!");
     }
-    @DisabledOnOs(architectures = "x86_64", disabledReason =  "Feature not ready for x86_64 architecture")
+    @DisabledOnOs(architectures = "amd64", disabledReason =  "Feature not ready for amd64 architecture")
     @Test
     public void unitTestTwo() {
         System.out.println ("This is unit test two!!");

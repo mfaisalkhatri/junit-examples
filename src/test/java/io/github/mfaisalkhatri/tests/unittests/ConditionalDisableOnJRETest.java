@@ -11,27 +11,27 @@ import org.junit.jupiter.api.condition.JRE;
  **/
 public class ConditionalDisableOnJRETest {
 
-    @DisabledOnJre (JRE.JAVA_11)
+    @DisabledOnJre (JRE.JAVA_15)
     @Test
-    public void unitTestOne() {
+    public void unitTestOne () {
         System.out.println ("This is unit test one!!");
     }
 
-    @DisabledForJreRange (min = JRE.JAVA_11)
+    @DisabledForJreRange (min = JRE.JAVA_15)
     @Test
-    public void unitTestTwo() {
+    public void unitTestTwo () {
         System.out.println ("This is unit test two!!");
     }
 
-    @DisabledForJreRange (max= JRE.JAVA_15)
+    @DisabledForJreRange (max = JRE.JAVA_15)
     @Test
-    public void unitTestThree() {
+    public void unitTestThree () {
         System.out.println ("This is unit test three!!");
     }
 
-    @DisabledForJreRange (min = JRE.JAVA_9, max= JRE.JAVA_15)
+    @DisabledForJreRange (min = JRE.JAVA_9, max = JRE.JAVA_15)
     @Test
-    public void unitTestFour() {
+    public void unitTestFour () {
         System.out.println ("This is unit test four!!");
     }
 }
