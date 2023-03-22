@@ -13,7 +13,7 @@ public class DisabledIfTest {
     @Test
     public void unitTestOne () {
 
-        System.out.println ("This test is unit test one!!");
+        System.out.println ("This unit test one!!");
     }
     boolean customCondition () {
         return System.getProperty ("LT_USERNAME")

@@ -15,18 +15,18 @@ public class ConditionalDisableOnOSTest {
     @DisabledOnOs(value = OS.WINDOWS, disabledReason = "This feature is available for MAC users only")
     @Test
     public void unitTestOne() {
-        System.out.println ("This test is unit test one!!");
+        System.out.println ("This is unit test one!!");
     }
     @DisabledOnOs(architectures = "x86_64", disabledReason =  "Feature not ready for x86_64 architecture")
     @Test
     public void unitTestTwo() {
-        System.out.println ("This test is unit test two!!");
+        System.out.println ("This is unit test two!!");
     }
 
     @DisabledOnOs(value = OS.MAC, architectures = "AArch64", disabledReason = "Fix is not available for MAC")
     @Test
     public void unitTestThree() {
-        System.out.println ("This test is unit test three!!");
+        System.out.println ("This is unit test three!!");
     }
 
 }

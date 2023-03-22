@@ -1,5 +1,8 @@
 package io.github.mfaisalkhatri.tests.unittests;
 
+import java.util.Map;
+import java.util.Properties;
+
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -19,4 +22,5 @@ public class DisabledSampleTest {
     public void sampleUnitTest () {
         System.out.println ("This is a working test");
     }
+
 }

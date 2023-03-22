@@ -14,24 +14,24 @@ public class ConditionalDisableOnJRETest {
     @DisabledOnJre (JRE.JAVA_11)
     @Test
     public void unitTestOne() {
-        System.out.println ("This test is unit test one!!");
+        System.out.println ("This is unit test one!!");
     }
 
     @DisabledForJreRange (min = JRE.JAVA_11)
     @Test
     public void unitTestTwo() {
-        System.out.println ("This test is unit test two!!");
+        System.out.println ("This is unit test two!!");
     }
 
     @DisabledForJreRange (max= JRE.JAVA_15)
     @Test
     public void unitTestThree() {
-        System.out.println ("This test is unit test three!!");
+        System.out.println ("This is unit test three!!");
     }
 
     @DisabledForJreRange (min = JRE.JAVA_9, max= JRE.JAVA_15)
     @Test
     public void unitTestFour() {
-        System.out.println ("This test is unit test four!!");
+        System.out.println ("This is unit test four!!");
     }
 }

@@ -21,6 +21,7 @@
         <javafaker.version>1.0.2</javafaker.version>
         <lombok.version>1.18.26</lombok.version>
         <junit.platform.launcher.version>1.9.2</junit.platform.launcher.version>
+        <system-stubs-jupiter.version>2.0.2</system-stubs-jupiter.version>
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
     </properties>
 
@@ -69,6 +70,11 @@
             <artifactId>junit-platform-launcher</artifactId>
             <version>${junit.platform.launcher.version}</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>uk.org.webcompere</groupId>
+            <artifactId>system-stubs-jupiter</artifactId>
+            <version>${system-stubs-jupiter.version}</version>
         </dependency>
     </dependencies>
 
