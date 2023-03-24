@@ -10,6 +10,7 @@ import uk.org.webcompere.systemstubs.properties.SystemProperties;
  * @author Faisal Khatri
  * @since 3/22/2023
  **/
+
 public class SystemPropertyVariableConditionDisableTest {
 
     @SystemStub
@@ -27,5 +28,10 @@ public class SystemPropertyVariableConditionDisableTest {
     @Test
     public void unitTestTwo () {
         System.out.println ("This is test two!!");
+    }
+
+    @Test
+    public void unitTestThree() {
+        System.out.println("This is test three!");
     }
 }
