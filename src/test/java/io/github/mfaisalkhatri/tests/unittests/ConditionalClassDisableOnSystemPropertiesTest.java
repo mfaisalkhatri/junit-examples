@@ -11,14 +11,13 @@ import org.junit.jupiter.api.condition.DisabledIfSystemProperty;
 
 @DisabledIfSystemProperties (value = {
     @DisabledIfSystemProperty (named = "username", matches = "faisal", disabledReason = "This test is disabled \n based on system property 'username'"),
-    @DisabledIfSystemProperty (named = "unitest", matches = "one", disabledReason = "This test is disabled \n based on system property 'unitest'") })
+    @DisabledIfSystemProperty (named = "unittest", matches = "two", disabledReason = "This test is disabled \n based on system property 'unitest'") })
 public class ConditionalClassDisableOnSystemPropertiesTest {
 
     @Test
     public void unitTestOne () {
         System.out.println ("This is test one!!");
     }
-
     @Test
     public void unitTestTwo () {
         System.out.println ("This is test two!!");

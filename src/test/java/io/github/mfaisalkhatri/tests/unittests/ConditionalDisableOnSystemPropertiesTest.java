@@ -12,7 +12,7 @@ public class ConditionalDisableOnSystemPropertiesTest {
 
     @DisabledIfSystemProperties (value = {
         @DisabledIfSystemProperty (named = "username", matches = "faisal", disabledReason = "This test is disabled \n based on system property 'username'"),
-        @DisabledIfSystemProperty (named = "unitest", matches = "one", disabledReason = "This test is disabled \n based on system property 'unitest'") })
+        @DisabledIfSystemProperty (named = "unittest", matches = "one", disabledReason = "This test is disabled \n based on system property 'unitest'") })
     @Test
     public void unitTestOne () {
         System.out.println ("This is test one!!");
