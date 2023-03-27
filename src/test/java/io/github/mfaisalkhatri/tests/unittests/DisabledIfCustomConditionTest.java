@@ -17,7 +17,7 @@ public class DisabledIfCustomConditionTest {
     }
 
     boolean customCondition () {
-        return System.getProperty ("LT_USERNAME")
+        return System.getProperty ("username")
             .contains ("faisal");
     }
 }
