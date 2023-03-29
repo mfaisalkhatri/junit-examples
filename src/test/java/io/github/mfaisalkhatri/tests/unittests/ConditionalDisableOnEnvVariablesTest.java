@@ -13,8 +13,8 @@ import uk.org.webcompere.systemstubs.jupiter.SystemStub;
 public class ConditionalDisableOnEnvVariablesTest {
 
     @DisabledIfEnvironmentVariables (value = {
-        @DisabledIfEnvironmentVariable (named = "skiptest", matches = "true", disabledReason = "this test is disabled based on  env variable named 'skiptest'"),
-        @DisabledIfEnvironmentVariable (named = "disabletest", matches = "yes", disabledReason = "this test is disabled based on  env variable named 'disabletest'") })
+        @DisabledIfEnvironmentVariable (named = "skiptest", matches = "true", disabledReason = "\nThis test is disabled based on  env variable named 'skiptest'"),
+        @DisabledIfEnvironmentVariable (named = "disabletest", matches = "yes", disabledReason = "\nThis test is disabled based on  env variable named 'disabletest'") })
     @Test
     public void unitTestOne () {
         System.out.println ("This is unit test one!!");

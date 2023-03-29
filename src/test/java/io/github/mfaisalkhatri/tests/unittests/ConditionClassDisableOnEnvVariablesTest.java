@@ -9,8 +9,8 @@ import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariables;
  * @since 3/22/2023
  **/
 @DisabledIfEnvironmentVariables(value = {
-        @DisabledIfEnvironmentVariable(named = "skiptest", matches = "true", disabledReason = "this test is disabled based on  env variable named 'skiptest'"),
-        @DisabledIfEnvironmentVariable(named = "disabletest", matches = "yes", disabledReason = "this test is disabled based on  env variable named 'disabletest'")})
+        @DisabledIfEnvironmentVariable(named = "skiptest", matches = "true", disabledReason = "\n This test is disabled based on  env variable named 'skiptest'"),
+        @DisabledIfEnvironmentVariable(named = "disabletest", matches = "yes", disabledReason = "\n This test is disabled based on  env variable named 'disabletest'")})
 public class ConditionClassDisableOnEnvVariablesTest {
     @Test
     public void unitTestOne() {
