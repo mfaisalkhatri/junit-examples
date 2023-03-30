@@ -2,17 +2,17 @@ package io.github.mfaisalkhatri.tests.unittests;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledIf;
+import org.junit.jupiter.api.condition.DisabledInNativeImage;
 
 /**
  * @author Faisal Khatri
  * @since 3/22/2023
  **/
-@DisabledIf (value = "customCondition", disabledReason = "Test disabled as custom condition evaluated to true")
+@DisabledIf (value = "customCondition", disabledReason = "Test class is disabled as custom condition evaluated to true")
 public class DisabledIfClassCustomConditionTest {
 
     static boolean customCondition () {
-        return System.getProperty ("username")
-            .contains ("faisal");
+        return true;
     }
 
     @Test
@@ -21,4 +21,9 @@ public class DisabledIfClassCustomConditionTest {
         System.out.println ("This unit test one!!");
     }
 
+    @Test
+    public void unitTestTwo () {
+
+        System.out.println ("This unit test two!!");
+    }
 }
