@@ -7,17 +7,18 @@ import org.junit.jupiter.api.condition.DisabledIf;
  * @author Faisal Khatri
  * @since 3/22/2023
  **/
-public class DisabledIfCustomConditionTest {
+@DisabledIf (value = "customCondition", disabledReason = "Test disabled as custom condition evaluated to true")
+public class DisabledIfClassCustomConditionTest {
 
-    @DisabledIf (value = "customCondition", disabledReason = "Test disabled as custom condition evaluated to true")
+    static boolean customCondition () {
+        return System.getProperty ("username")
+            .contains ("faisal");
+    }
+
     @Test
     public void unitTestOne () {
 
         System.out.println ("This unit test one!!");
     }
 
-    boolean customCondition () {
-        return System.getProperty ("username")
-            .contains ("faisal");
-    }
 }
