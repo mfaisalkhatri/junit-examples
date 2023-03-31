@@ -20,8 +20,8 @@
         <log4japi.version>2.20.0</log4japi.version>
         <javafaker.version>1.0.2</javafaker.version>
         <lombok.version>1.18.26</lombok.version>
+        <junit4.version>4.13.2</junit4.version>
         <junit.platform.launcher.version>1.9.2</junit.platform.launcher.version>
-        <system-stubs-jupiter.version>2.0.2</system-stubs-jupiter.version>
         <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
     </properties>
 
@@ -71,10 +71,12 @@
             <version>${junit.platform.launcher.version}</version>
             <scope>test</scope>
         </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
-            <groupId>uk.org.webcompere</groupId>
-            <artifactId>system-stubs-jupiter</artifactId>
-            <version>${system-stubs-jupiter.version}</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit4.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

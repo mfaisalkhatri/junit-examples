@@ -10,6 +10,7 @@ import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
 @DisabledIfEnvironmentVariable (named = "disabletest", matches = "yes",
     disabledReason = "\nThis test is disabled based on env variable named 'disabletest'")
 public class ConditionalClassDisableOnEnvVariableTest {
+
     @Test
     public void unitTestOne () {
         System.out.println ("This is unit test one!!");

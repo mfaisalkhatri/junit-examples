@@ -2,7 +2,6 @@ package io.github.mfaisalkhatri.tests.unittests;
 
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledIf;
-import org.junit.jupiter.api.condition.DisabledInNativeImage;
 
 /**
  * @author Faisal Khatri

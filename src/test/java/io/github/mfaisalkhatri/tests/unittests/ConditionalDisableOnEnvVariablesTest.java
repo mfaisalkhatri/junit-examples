@@ -3,8 +3,6 @@ package io.github.mfaisalkhatri.tests.unittests;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariable;
 import org.junit.jupiter.api.condition.DisabledIfEnvironmentVariables;
-import uk.org.webcompere.systemstubs.environment.EnvironmentVariables;
-import uk.org.webcompere.systemstubs.jupiter.SystemStub;
 
 /**
  * @author Faisal Khatri
