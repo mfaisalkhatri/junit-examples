@@ -1,4 +1,4 @@
-package io.github.mfaisalkhatri.tests;
+package io.github.mfaisalkhatri.tests.unittests;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -11,7 +11,7 @@ import org.junit.jupiter.api.TestInstance;
  * @since 11/4/2022
  **/
 @TestInstance (TestInstance.Lifecycle.PER_CLASS)
-public class SampleClass {
+public class SampleClassTest {
 
     @BeforeAll
     public void beforeAllTest () {
@@ -45,6 +45,7 @@ public class SampleClass {
         public void testTwo () {
             System.out.println ("This is second test of nested class!");
         }
+
         @AfterAll
         public void afterAllNestedTest () {
             System.out.println ("This is the after all method from nested class");

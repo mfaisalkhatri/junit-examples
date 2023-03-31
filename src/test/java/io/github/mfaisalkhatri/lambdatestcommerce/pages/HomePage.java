@@ -1,4 +1,4 @@
-package io.github.mfaisalkhatri.pages;
+package io.github.mfaisalkhatri.lambdatestcommerce.pages;
 
 import static io.github.mfaisalkhatri.drivers.DriverManager.getDriver;
 

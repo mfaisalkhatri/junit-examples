@@ -1,10 +1,10 @@
-package io.github.mfaisalkhatri.pages;
+package io.github.mfaisalkhatri.lambdatestcommerce.pages;
 
-import static io.github.mfaisalkhatri.data.TestDataBuilder.getRegisterUserData;
+import static io.github.mfaisalkhatri.lambdatestcommerce.data.TestDataBuilder.getRegisterUserData;
 import static io.github.mfaisalkhatri.drivers.DriverManager.getDriver;
 import static io.github.mfaisalkhatri.utilities.Helper.enterText;
 
-import io.github.mfaisalkhatri.data.RegisterUserData;
+import io.github.mfaisalkhatri.lambdatestcommerce.data.RegisterUserData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;

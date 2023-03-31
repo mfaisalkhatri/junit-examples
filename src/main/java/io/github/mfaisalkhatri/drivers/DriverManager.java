@@ -4,15 +4,15 @@ import static java.text.MessageFormat.format;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.HashMap;
-import java.util.Objects;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 /**
@@ -23,16 +23,16 @@ public class DriverManager {
     private static final ThreadLocal<WebDriver> DRIVER          = new ThreadLocal<> ();
     private static final Logger                 LOG             = LogManager.getLogger ("DriverManager.class");
     private static final String                 GRID_URL        = "@hub.lambdatest.com/wd/hub";
-    private static final String                 LT_ACCESS_TOKEN = System.getProperty ("accessKey");
-    private static final String                 LT_USERNAME     = System.getProperty ("username");
+    private static final String                 LT_ACCESS_TOKEN = System.getProperty ("LT_ACCESS_TOKEN");
+    private static final String                 LT_USERNAME     = System.getProperty ("LT_USERNAME");
 
     public static void createDriver () {
-        setupChromeInLambdaTest ();
-        setupBrowserTimeouts ();
+        //setupChromeInRemote ();
+        setupChrome ();
     }
 
-    public static <D extends WebDriver> D getDriver () {
-        return (D) DriverManager.DRIVER.get ();
+    public static WebDriver getDriver () {
+        return DriverManager.DRIVER.get ();
     }
 
     public static void quitDriver () {
@@ -60,7 +60,14 @@ public class DriverManager {
             .scriptTimeout (Duration.ofSeconds (30));
     }
 
-    private static void setupChromeInLambdaTest () {
+    private static void setupChrome () {
+        ChromeOptions chromeOptions = new ChromeOptions ();
+        chromeOptions.addArguments("--remote-allow-origins=*");
+        setDriver (new ChromeDriver (chromeOptions));
+        setupBrowserTimeouts ();
+    }
+
+    private static void setupChromeInRemote () {
         final ChromeOptions browserOptions = new ChromeOptions ();
         browserOptions.setPlatformName ("Windows 10");
         browserOptions.setBrowserVersion ("107.0");
@@ -79,8 +86,9 @@ public class DriverManager {
                 new RemoteWebDriver (new URL (format ("https://{0}:{1}{2}", LT_USERNAME, LT_ACCESS_TOKEN, GRID_URL)),
                     browserOptions));
         } catch (final MalformedURLException e) {
-            LOG.error ("Error setting up chrome browser in LambdaTest", e.getMessage ());
+            LOG.error ("Error setting up chrome browser in LambdaTest");
         }
+        setupBrowserTimeouts ();
     }
 
     private DriverManager () {
