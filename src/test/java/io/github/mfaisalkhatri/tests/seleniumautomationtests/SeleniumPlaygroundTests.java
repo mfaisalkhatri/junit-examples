@@ -1,4 +1,4 @@
-package io.github.mfaisalkhatri.tests;
+package io.github.mfaisalkhatri.tests.seleniumautomationtests;
 
 import io.github.mfaisalkhatri.drivers.Browsers;
 import io.github.mfaisalkhatri.seleniumplayground.pages.HomePage;
@@ -51,9 +51,6 @@ public class SeleniumPlaygroundTests {
         SimpleFormPage formPage = new SimpleFormPage();
         formPage.getSumOfTwoNumbers("2", "6");
         assertEquals("8", formPage.getResultText());
-        //to find os arch
-        //System.out.println(System.getProperty("os.arch"));
-
     }
 
 }
