@@ -1,7 +1,9 @@
 package io.github.mfaisalkhatri.tests.unittests;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.condition.DisabledOnJre;
 import org.junit.jupiter.api.condition.DisabledOnOs;
+import org.junit.jupiter.api.condition.JRE;
 import org.junit.jupiter.api.condition.OS;
 
 /**
@@ -9,6 +11,7 @@ import org.junit.jupiter.api.condition.OS;
  * @since 3/22/2023
  **/
 public class ConditionalDisableOnOSTest {
+
 
     @DisabledOnOs(value = OS.WINDOWS, disabledReason = "This feature is available for MAC users only")
     @Test
@@ -21,6 +24,7 @@ public class ConditionalDisableOnOSTest {
     public void unitTestTwo() {
         System.out.println("This is unit test two!!");
     }
+
 
     @DisabledOnOs(value = OS.MAC, architectures = "AArch64", disabledReason = "Fix is not available for MAC")
     @Test

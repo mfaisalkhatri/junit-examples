@@ -1,4 +1,4 @@
-package io.github.mfaisalkhatri.tests;
+package io.github.mfaisalkhatri.tests.seleniumautomation;
 
 import static io.github.mfaisalkhatri.drivers.DriverManager.createDriver;
 import static io.github.mfaisalkhatri.drivers.DriverManager.getDriver;
