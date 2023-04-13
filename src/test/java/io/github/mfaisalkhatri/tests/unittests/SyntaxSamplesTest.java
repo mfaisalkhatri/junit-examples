@@ -9,4 +9,11 @@ public class SyntaxSamplesTest {
         System.out.println(System.getProperty("os.arch"));
     }
 
+    @Test
+    public void getEnvDetails () {
+        System.getenv().forEach((k, v) -> {
+            System.out.println(k + ":" + v);
+        });
+    }
+
 }
