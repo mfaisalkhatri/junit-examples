@@ -6,7 +6,7 @@
 
 - This repo contains automation tests for Junit 5 Unit testing framework.
 - This project uses Maven as build tool and JUnit 5 framework to run the tests.
-- [LambdaTest E-Commerce Playground][lambdatestecommerceplayground] website is used for running the demo tests.
+- [LambdaTest E-Commerce Playground](https://ecommerce-playground.lambdatest.io/) website is used for running the demo tests.
 
 ## Running the Tests
 
@@ -25,18 +25,17 @@ By default, tests would be running on LambdaTest Platform on Chrome Browser.
 
     - Click on Apply and OK to start running the tests.
 
+## Blog Links
+
+- [How To Use JUnit Ignore Test Annotation [With Examples]](https://www.lambdatest.com/blog/junit-ignore-test-annotation/)
+- [JUnit Tutorial: Writing Nested Tests In JUnit 5](https://www.lambdatest.com/learning-hub/junit5-nested-tests)
+
 🧬 Need Assistance?
 
 - Discuss your queries by writing to me @ `mohammadfaisalkhatri@gmail.com`
   OR ping me on any of the social media sites using the below link:
-    - [Linktree][linktree]
+    - [Linktree](https://linktr.ee/faisalkhatri)
 
-## :thought_balloon: Checkout the blogs related to Testing on my [website][] and [medium-account][medium]
+### :thought_balloon: Checkout the blogs related to Testing on [Medium](https://medium.com/@iamfaisalkhatri), [My Website](https://mfaisalkhatri.github.io) and [LambdaTest blogs](https://www.lambdatest.com/blog/author/mfaisalkhatri/)
 
-[linktree]: https://linktr.ee/faisalkhatri
-
-[website]: https://mfaisalkhatri.github.io
-
-[medium]: https://medium.com/@iamfaisalkhatri
-
-[lambdatestecommerceplayground]: https://ecommerce-playground.lambdatest.io/
+### :bookmark: Checkout videos related to Software Testing and Test automation tools on [Testing Talks with Faisal Khatri](https://www.youtube.com/@faisalkhatriqa)
