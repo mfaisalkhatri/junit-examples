@@ -1,13 +1,14 @@
 package io.github.mfaisalkhatri.lambdatestcommerce.data;
 
-import com.github.javafaker.Faker;
+
+import net.datafaker.Faker;
 
 /**
  * Created By Faisal Khatri on 25-07-2022
  */
 public class TestDataBuilder {
 
-    private static final Faker FAKER = Faker.instance ();
+    private static final Faker FAKER = new Faker();
     public static RegisterUserData getRegisterUserData () {
         return RegisterUserData.builder ()
             .firstName (FAKER.name ()

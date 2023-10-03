@@ -1,6 +1,7 @@
 package io.github.mfaisalkhatri.tests.seleniumautomationtests;
 
 import io.github.mfaisalkhatri.drivers.Browsers;
+import io.github.mfaisalkhatri.seleniumplayground.pages.CheckboxDemoPage;
 import io.github.mfaisalkhatri.seleniumplayground.pages.HomePage;
 import io.github.mfaisalkhatri.seleniumplayground.pages.SimpleFormPage;
 import org.junit.jupiter.api.AfterAll;
@@ -10,6 +11,7 @@ import org.junit.jupiter.api.condition.OS;
 
 import static io.github.mfaisalkhatri.drivers.DriverManager.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * Created By Faisal Khatri on 17-03-2023
@@ -53,4 +55,19 @@ public class SeleniumPlaygroundTests {
         assertEquals("8", formPage.getResultText());
     }
 
+    @Test
+    public void checkboxDemoTest() {
+        createDriver(Browsers.CHROME);
+        final String website = "https://www.lambdatest.com/selenium-playground/";
+        getDriver().get(website);
+
+        final HomePage homePage = new HomePage();
+        homePage.navigateToLink("Checkbox Demo");
+
+        final var checkboxDemoPage = new CheckboxDemoPage();
+        assertTrue(checkboxDemoPage.checkIfCheckboxOneIsTicked());
+        assertTrue(checkboxDemoPage.checkIfCheckboxThreeIsDisabled());
+
+
+    }
 }

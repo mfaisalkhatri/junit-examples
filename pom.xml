@@ -12,17 +12,17 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <junit.version>5.9.2</junit.version>
-        <selenium.version>4.8.3</selenium.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <junit.version>5.10.0</junit.version>
+        <selenium.version>4.12.1</selenium.version>
         <log4jcore.version>2.20.0</log4jcore.version>
         <log4japi.version>2.20.0</log4japi.version>
-        <javafaker.version>1.0.2</javafaker.version>
+        <datafaker.version>2.0.1</datafaker.version>
         <lombok.version>1.18.26</lombok.version>
         <junit4.version>4.13.2</junit4.version>
-        <junit.platform.launcher.version>1.9.2</junit.platform.launcher.version>
-        <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
+        <junit.platform.launcher.version>1.10.0</junit.platform.launcher.version>
+        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
     </properties>
 
     <dependencies>
@@ -51,11 +51,11 @@
             <artifactId>log4j-api</artifactId>
             <version>${log4japi.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+        <!-- https://mvnrepository.com/artifact/net.datafaker/datafaker -->
         <dependency>
-            <groupId>com.github.javafaker</groupId>
-            <artifactId>javafaker</artifactId>
-            <version>${javafaker.version}</version>
+            <groupId>net.datafaker</groupId>
+            <artifactId>datafaker</artifactId>
+            <version>${datafaker.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
