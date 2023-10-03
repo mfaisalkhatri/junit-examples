@@ -3,6 +3,7 @@ package io.github.mfaisalkhatri.tests.seleniumautomationtests;
 import io.github.mfaisalkhatri.drivers.Browsers;
 import io.github.mfaisalkhatri.seleniumplayground.pages.CheckboxDemoPage;
 import io.github.mfaisalkhatri.seleniumplayground.pages.HomePage;
+import io.github.mfaisalkhatri.seleniumplayground.pages.RedirectionPage;
 import io.github.mfaisalkhatri.seleniumplayground.pages.SimpleFormPage;
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.Test;
@@ -67,7 +68,18 @@ public class SeleniumPlaygroundTests {
         final var checkboxDemoPage = new CheckboxDemoPage();
         assertTrue(checkboxDemoPage.checkIfCheckboxOneIsTicked());
         assertTrue(checkboxDemoPage.checkIfCheckboxThreeIsDisabled());
+    }
 
+    @Test
+    public void redirectionPageTest() {
+        createDriver(Browsers.CHROME);
+        final String website = "https://www.lambdatest.com/selenium-playground/";
+        getDriver().get(website);
 
+        final HomePage homePage = new HomePage();
+        homePage.navigateToLink("Redirection");
+
+        final var redirectionPage = new RedirectionPage();
+        assertTrue(redirectionPage.isPageTitleDisplayed());
     }
 }
