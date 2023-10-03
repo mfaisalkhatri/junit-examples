@@ -19,11 +19,11 @@ public class RegistrationPage {
     private final        RegisterUserData registerUserData;
 
     public RegistrationPage () {
-        registerUserData = getRegisterUserData ();
+        this.registerUserData = getRegisterUserData ();
     }
 
     public String getRegisteredEmail () {
-        return registerUserData.getEmail ();
+        return this.registerUserData.getEmail ();
     }
 
     public String getPassword() {

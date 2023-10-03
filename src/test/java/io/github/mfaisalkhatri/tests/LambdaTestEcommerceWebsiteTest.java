@@ -34,15 +34,15 @@ public class LambdaTestEcommerceWebsiteTest {
     @Test
     @DisplayName("Test by registering a new user")
     public void testRegisterUser() {
-        HomePage homePage = new HomePage();
-        RegistrationPage registrationPage = homePage.openUserRegistrationPage();
+        final HomePage homePage = new HomePage();
+        final RegistrationPage registrationPage = homePage.openUserRegistrationPage();
         registeredEmail = registrationPage.getRegisteredEmail();
         password = registrationPage.getPassword();
         assertEquals("Register Account", registrationPage.getPageHeader());
 
-        RegistrationSuccessPage registrationSuccessPage = registrationPage.registerUser();
+        final RegistrationSuccessPage registrationSuccessPage = registrationPage.registerUser();
         assertEquals("Your Account Has Been Created!", registrationSuccessPage.getRegistrationSuccessMessage());
-        AccountPage accountPage = new AccountPage();
+        final AccountPage accountPage = new AccountPage();
         accountPage.logoutLink()
                 .click();
     }
@@ -58,24 +58,24 @@ public class LambdaTestEcommerceWebsiteTest {
         public void testSetup() {
             final String website = "https://ecommerce-playground.lambdatest.io/";
             getDriver().get(website);
-            HomePage homePage = new HomePage();
-            loginPage = homePage.openLoginPage();
+            final HomePage homePage = new HomePage();
+            this.loginPage = homePage.openLoginPage();
         }
 
         @Test
         @DisplayName("Should not allow logging in user with Invalid Username")
         @Order(1)
         void testLoginWithInvalidUsername() {
-            loginPage.loginIntoWebsite("test_invalid_username@gmail.com", password);
-            assertEquals("Warning: No match for E-Mail Address and/or Password.", loginPage.getFailedLoginWarning());
+            this.loginPage.loginIntoWebsite("test_invalid_username@gmail.com", password);
+            assertEquals("Warning: No match for E-Mail Address and/or Password.", this.loginPage.getFailedLoginWarning());
         }
 
         @Test
         @DisplayName("Should not allow logging in user with Invalid Password")
         @Order(2)
         void testLoginWithInvalidPassword() {
-            loginPage.loginIntoWebsite(registeredEmail, "InvalidPassword");
-            assertEquals("Warning: No match for E-Mail Address and/or Password.", loginPage.getFailedLoginWarning());
+            this.loginPage.loginIntoWebsite(registeredEmail, "InvalidPassword");
+            assertEquals("Warning: No match for E-Mail Address and/or Password.", this.loginPage.getFailedLoginWarning());
 
         }
 
@@ -83,8 +83,8 @@ public class LambdaTestEcommerceWebsiteTest {
         @DisplayName("Should not allow logging in user by keeping Username and Password fields blank")
         @Order(3)
         void testLoginWithBlankUsernameAndPassword() {
-            loginPage.loginIntoWebsite(" ", " ");
-            assertEquals("Warning: No match for E-Mail Address and/or Password.", loginPage.getFailedLoginWarning());
+            this.loginPage.loginIntoWebsite(" ", " ");
+            assertEquals("Warning: No match for E-Mail Address and/or Password.", this.loginPage.getFailedLoginWarning());
 
         }
 
@@ -92,8 +92,8 @@ public class LambdaTestEcommerceWebsiteTest {
         @DisplayName("Should allow logging in with Valid credentials")
         @Order(4)
         void testLoginWithValidCredentials() {
-            loginPage.loginIntoWebsite(registeredEmail, password);
-            AccountPage accountPage = new AccountPage();
+            this.loginPage.loginIntoWebsite(registeredEmail, password);
+            final AccountPage accountPage = new AccountPage();
             assertTrue(accountPage.logoutLink()
                     .isDisplayed());
         }
