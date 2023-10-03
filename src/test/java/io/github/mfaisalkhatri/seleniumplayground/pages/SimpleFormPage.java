@@ -10,7 +10,7 @@ import static io.github.mfaisalkhatri.drivers.DriverManager.getDriver;
  */
 public class SimpleFormPage {
 
-    public void getSumOfTwoNumbers(String numberOne, String numberTwo) {
+    public void getSumOfTwoNumbers(final String numberOne, final String numberTwo) {
         fieldA().sendKeys(numberOne);
         fieldB().sendKeys(numberTwo);
         getValuesBtn().click();
@@ -44,7 +44,7 @@ public class SimpleFormPage {
         return getDriver().findElement(By.id("showInput"));
     }
 
-    public void enterMessage(String messageText) {
+    public void enterMessage(final String messageText) {
         messageField().sendKeys(messageText);
         showMessageBtn().click();
     }

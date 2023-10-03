@@ -28,10 +28,10 @@ public class SeleniumPlaygroundTests {
         final String website = "https://www.lambdatest.com/selenium-playground/";
         getDriver().get(website);
 
-        HomePage homePage = new HomePage();
+        final HomePage homePage = new HomePage();
         homePage.navigateToLink("Simple Form Demo");
 
-        SimpleFormPage formPage = new SimpleFormPage();
+        final SimpleFormPage formPage = new SimpleFormPage();
         final String messageText = "This is a test";
         formPage.enterMessage(messageText);
         assertEquals(messageText, formPage.getMessage());
@@ -45,10 +45,10 @@ public class SeleniumPlaygroundTests {
         final String website = "https://www.lambdatest.com/selenium-playground/";
         getDriver().get(website);
 
-        HomePage homePage = new HomePage();
+        final HomePage homePage = new HomePage();
         homePage.navigateToLink("Simple Form Demo");
 
-        SimpleFormPage formPage = new SimpleFormPage();
+        final SimpleFormPage formPage = new SimpleFormPage();
         formPage.getSumOfTwoNumbers("2", "6");
         assertEquals("8", formPage.getResultText());
     }

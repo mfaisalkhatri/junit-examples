@@ -28,7 +28,7 @@ public class LoginPage {
         return getDriver ().findElement (By.cssSelector ("#account-login > div.alert")).getText ();
     }
 
-    public void loginIntoWebsite (String email, String password) {
+    public void loginIntoWebsite (final String email, final String password) {
         enterText(emailField (), email);
         enterText(passwordField (), password);
         loginBtn ().click ();
