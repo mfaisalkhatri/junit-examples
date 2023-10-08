@@ -7,7 +7,6 @@ import static io.github.mfaisalkhatri.drivers.DriverManager.getDriver;
 
 public class CheckboxDemoPage {
 
-
     public WebElement checkboxOne() {
         return getDriver().findElement(By.cssSelector("div:nth-child(2) > div:nth-child(1) > input[type=\"checkbox\"]"));
     }
