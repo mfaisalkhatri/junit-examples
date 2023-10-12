@@ -35,6 +35,7 @@ public class SeleniumPlaygroundTests {
         final String messageText = "This is a test";
         formPage.enterMessage(messageText);
         assertEquals(messageText, formPage.getMessage());
+
     }
 
     @DisabledOnOs(OS.WINDOWS)
@@ -63,7 +64,7 @@ public class SeleniumPlaygroundTests {
         homePage.navigateToLink("Checkbox Demo");
 
         final var checkboxDemoPage = new CheckboxDemoPage();
-        assertTrue(checkboxDemoPage.checkIfCheckboxOneIsTicked());
+        assertTrue(checkboxDemoPage.checkIfCheckboxOneIsTicked(), "Check box one is not ticked");
         assertTrue(checkboxDemoPage.checkIfCheckboxThreeIsDisabled());
     }
 

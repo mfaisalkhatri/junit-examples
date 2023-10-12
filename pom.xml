@@ -16,10 +16,7 @@
         <maven.compiler.target>17</maven.compiler.target>
         <junit.version>5.10.0</junit.version>
         <selenium.version>4.12.1</selenium.version>
-        <log4jcore.version>2.20.0</log4jcore.version>
-        <log4japi.version>2.20.0</log4japi.version>
         <datafaker.version>2.0.1</datafaker.version>
-        <lombok.version>1.18.26</lombok.version>
         <junit4.version>4.13.2</junit4.version>
         <junit.platform.launcher.version>1.10.0</junit.platform.launcher.version>
         <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
@@ -39,30 +36,11 @@
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
-            <version>${log4jcore.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
-        <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
-            <version>${log4japi.version}</version>
-        </dependency>
         <!-- https://mvnrepository.com/artifact/net.datafaker/datafaker -->
         <dependency>
             <groupId>net.datafaker</groupId>
             <artifactId>datafaker</artifactId>
             <version>${datafaker.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>${lombok.version}</version>
-            <scope>provided</scope>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
         <dependency>

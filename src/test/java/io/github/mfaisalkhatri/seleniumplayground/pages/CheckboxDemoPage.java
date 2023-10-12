@@ -19,7 +19,7 @@ public class CheckboxDemoPage {
     }
 
     public boolean checkIfCheckboxOneIsTicked() {
-        tickCheckBoxOne();
+       tickCheckBoxOne();
         return this.checkboxOne().isSelected();
     }
 
