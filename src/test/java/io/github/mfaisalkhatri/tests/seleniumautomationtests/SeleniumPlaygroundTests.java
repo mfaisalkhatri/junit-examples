@@ -56,7 +56,7 @@ public class SeleniumPlaygroundTests {
 
     @Test
     public void checkboxDemoTest() {
-        createDriver(Browsers.CHROME);
+        createDriver(Browsers.REMOTE_CHROME);
         final String website = "https://www.lambdatest.com/selenium-playground/";
         getDriver().get(website);
 
@@ -70,7 +70,7 @@ public class SeleniumPlaygroundTests {
 
     @Test
     public void redirectionPageTest() {
-        createDriver(Browsers.CHROME);
+        createDriver(Browsers.REMOTE_CHROME);
         final String website = "https://www.lambdatest.com/selenium-playground/";
         getDriver().get(website);
 
@@ -83,7 +83,7 @@ public class SeleniumPlaygroundTests {
 
     @Test
     public void dataFilterPageTest() {
-        createDriver(Browsers.CHROME);
+        createDriver(Browsers.REMOTE_CHROME);
         final String website = "https://www.lambdatest.com/selenium-playground/";
         getDriver().get(website);
 

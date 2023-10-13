@@ -1,7 +1,5 @@
 package io.github.mfaisalkhatri.drivers;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -24,15 +22,14 @@ import static java.text.MessageFormat.format;
  **/
 public class DriverManager {
     private static final ThreadLocal<WebDriver> DRIVER = new ThreadLocal<>();
-    private static final Logger LOG = LogManager.getLogger("DriverManager.class");
     private static final String GRID_URL = "@hub.lambdatest.com/wd/hub";
-    private static final String LT_ACCESS_TOKEN = System.getProperty("LT_ACCESS_TOKEN");
+    private static final String LT_ACCESS_TOKEN = System.getProperty("LT_ACCESS_KEY");
     private static final String LT_USERNAME = System.getProperty("LT_USERNAME");
 
     private DriverManager() {
     }
 
-    public static void createDriver(Browsers browserName) {
+    public static void createDriver(final Browsers browserName) {
         switch (browserName) {
             case FIREFOX:
                 setupFirefox();
@@ -45,6 +42,7 @@ public class DriverManager {
                 break;
             case EDGE:
                 setupEdge();
+                break;
             case REMOTE_CHROME:
                 setupChromeInRemote();
                 break;
@@ -59,55 +57,45 @@ public class DriverManager {
         return DRIVER.get();
     }
 
-    private static void setDriver(WebDriver driver) {
+    private static void setDriver(final WebDriver driver) {
         DriverManager.DRIVER.set(driver);
     }
 
     public static void quitDriver() {
         if (null != DriverManager.DRIVER.get()) {
-            LOG.info("Closing the driver...");
             getDriver().quit();
             DRIVER.remove();
         }
     }
 
     private static void setupBrowserTimeouts() {
-        LOG.info("Setting Browser Timeouts....");
         getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
-        getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
-        getDriver().manage().timeouts().scriptTimeout(Duration.ofSeconds(30));
     }
 
     private static void setupChrome() {
         setDriver(new ChromeDriver());
-        setupBrowserTimeouts();
     }
 
     private static void setupFirefox() {
         setDriver(new FirefoxDriver());
-        setupBrowserTimeouts();
     }
 
     private static void setupSafari() {
         setDriver(new SafariDriver());
-        setupBrowserTimeouts();
     }
 
     private static void setupEdge() {
         setDriver(new EdgeDriver());
-        setupBrowserTimeouts();
     }
 
     private static void setupIE() {
         setDriver(new InternetExplorerDriver());
-        setupBrowserTimeouts();
     }
 
     private static void setupChromeInRemote() {
-        ChromeOptions browserOptions = new ChromeOptions();
+        final ChromeOptions browserOptions = new ChromeOptions();
         browserOptions.setPlatformName("Windows 10");
-        browserOptions.setBrowserVersion("107.0");
-        HashMap<String, Object> ltOptions = new HashMap<>();
+        final HashMap<String, Object> ltOptions = new HashMap<>();
         ltOptions.put("username", DriverManager.LT_USERNAME);
         ltOptions.put("accessKey", DriverManager.LT_ACCESS_TOKEN);
         ltOptions.put("resolution", "2560x1440");
@@ -119,10 +107,9 @@ public class DriverManager {
         browserOptions.setCapability("LT:Options", ltOptions);
         try {
             setDriver(new RemoteWebDriver(new URL(format("https://{0}:{1}{2}", DriverManager.LT_USERNAME, DriverManager.LT_ACCESS_TOKEN, DriverManager.GRID_URL)), browserOptions));
-        } catch (MalformedURLException e) {
-            LOG.error("Error setting up chrome browser in LambdaTest");
+        } catch (final MalformedURLException e) {
+            throw new Error("Error setting up chrome browser in LambdaTest", e);
         }
-        setupBrowserTimeouts();
     }
 
 }
