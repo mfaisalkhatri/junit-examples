@@ -1,12 +1,11 @@
-![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
-
 ## Don't forget to give a :star: to make the project popular.
 
 ## :question: What is this Repository about?
 
 - This repo contains automation tests for Junit 5 Unit testing framework.
 - This project uses Maven as build tool and JUnit 5 framework to run the tests.
-- [LambdaTest E-Commerce Playground](https://ecommerce-playground.lambdatest.io/) website is used for running the demo tests.
+- [LambdaTest E-Commerce Playground](https://ecommerce-playground.lambdatest.io/) website is used for running the demo
+  tests.
 
 ## Running the Tests
 
@@ -27,6 +26,8 @@ By default, tests would be running on LambdaTest Platform on Chrome Browser.
 
 ## Blog Links
 
+- [Beginner’s Guide to JUnit 5](https://medium.com/@iamfaisalkhatri/beginners-guide-to-junit-5-7756286cd4be)]
+- [How to Write JUnit Test Cases: Step-by-Step Guide](https://www.lambdatest.com/blog/junit-test-cases/)
 - [How To Use JUnit Ignore Test Annotation [With Examples]](https://www.lambdatest.com/blog/junit-ignore-test-annotation/)
 - [JUnit Tutorial: Writing Nested Tests In JUnit 5](https://www.lambdatest.com/learning-hub/junit5-nested-tests)
 
@@ -36,6 +37,6 @@ By default, tests would be running on LambdaTest Platform on Chrome Browser.
   OR ping me on any of the social media sites using the below link:
     - [Linktree](https://linktr.ee/faisalkhatri)
 
-### :thought_balloon: Checkout the blogs related to Testing on [Medium](https://medium.com/@iamfaisalkhatri), [My Website](https://mfaisalkhatri.github.io) and [LambdaTest blogs](https://www.lambdatest.com/blog/author/mfaisalkhatri/)
+### :thought_balloon: Checkout the blogs related to Testing on [Medium blog](https://medium.com/@iamfaisalkhatri), [My Website](https://mfaisalkhatri.github.io) and [LambdaTest blogs](https://www.lambdatest.com/blog/author/mfaisalkhatri/)
 
 ### :bookmark: Checkout videos related to Software Testing and Test automation tools on [Testing Talks with Faisal Khatri](https://www.youtube.com/@faisalkhatriqa)
