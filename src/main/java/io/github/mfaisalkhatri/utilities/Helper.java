@@ -4,13 +4,12 @@ import org.openqa.selenium.WebElement;
 
 public class Helper {
 
-    public static void enterText (final WebElement element, String text) {
+    public static void enterText (final WebElement element, final String text) {
         element.click ();
         element.clear ();
         element.sendKeys (text);
     }
 
     private Helper () {
-        
     }
 }

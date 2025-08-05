@@ -10,7 +10,7 @@ import org.openqa.selenium.By;
 public class HomePage {
 
     public void navigateToLink (final String linkText) {
-        getDriver ().findElement (By.linkText (linkText)).click ();
+        getDriver ().findElement (By.linkText (linkText))
+            .click ();
     }
-
 }

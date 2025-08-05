@@ -11,8 +11,7 @@ import org.openqa.selenium.WebElement;
  **/
 public class AccountPage {
 
-    public WebElement logoutLink() {
-        return getDriver().findElement (By.linkText ("Logout"));
+    public WebElement logoutLink () {
+        return getDriver ().findElement (By.linkText ("Logout"));
     }
-
 }
