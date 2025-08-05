@@ -8,7 +8,7 @@ import org.junit.Test;
  * @since 3/31/2023
  **/
 
-@Ignore("Feature is WIP")
+@Ignore ("Feature is WIP")
 public class IgnoreClassExampleTest {
 
     @Test

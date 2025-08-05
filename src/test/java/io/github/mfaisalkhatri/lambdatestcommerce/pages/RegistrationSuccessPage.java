@@ -16,10 +16,10 @@ public class RegistrationSuccessPage {
             .getText ();
     }
 
-//    public RegistrationSuccessPage verifySuccessfulRegistration () {
-//        assertEquals (, "Your Account Has Been Created!");
-//
-//    }
+    //    public RegistrationSuccessPage verifySuccessfulRegistration () {
+    //        assertEquals (, "Your Account Has Been Created!");
+    //
+    //    }
 
     private WebElement continueBtn () {
         return getDriver ().findElement (By.cssSelector (".buttons > a.btn-primary"));

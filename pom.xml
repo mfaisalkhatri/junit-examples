@@ -14,50 +14,44 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <junit.version>5.10.0</junit.version>
-        <selenium.version>4.12.1</selenium.version>
-        <datafaker.version>2.0.1</datafaker.version>
+        <junit.version>6.0.0-M2</junit.version>
+        <selenium.version>4.34.0</selenium.version>
+        <datafaker.version>2.4.4</datafaker.version>
         <junit4.version>4.13.2</junit4.version>
-        <junit.platform.launcher.version>1.10.0</junit.platform.launcher.version>
-        <lombok.version>1.18.30</lombok.version>
-        <maven-surefire-plugin.version>3.1.2</maven-surefire-plugin.version>
+        <junit.platform.launcher.version>6.0.0-M2</junit.platform.launcher.version>
+        <lombok.version>1.18.38</lombok.version>
+        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
     </properties>
 
     <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <version>${junit.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
             <version>${selenium.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/net.datafaker/datafaker -->
         <dependency>
             <groupId>net.datafaker</groupId>
             <artifactId>datafaker</artifactId>
             <version>${datafaker.version}</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-launcher -->
         <dependency>
             <groupId>org.junit.platform</groupId>
             <artifactId>junit-platform-launcher</artifactId>
             <version>${junit.platform.launcher.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/junit/junit -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>${junit4.version}</version>
             <scope>test</scope>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
@@ -65,7 +59,6 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-
     <build>
         <plugins>
             <plugin>

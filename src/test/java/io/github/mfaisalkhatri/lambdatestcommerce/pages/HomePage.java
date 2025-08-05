@@ -11,6 +11,12 @@ import org.openqa.selenium.WebElement;
  **/
 public class HomePage {
 
+    public LoginPage openLoginPage () {
+        openMyAccountMenu ().loginLink ()
+            .click ();
+        return new LoginPage ();
+    }
+
     public RegistrationPage openUserRegistrationPage () {
         openMyAccountMenu ().registerLink ()
             .click ();
@@ -29,10 +35,5 @@ public class HomePage {
 
     private WebElement registerLink () {
         return getDriver ().findElement (By.linkText ("Register"));
-    }
-
-    public LoginPage openLoginPage () {
-        openMyAccountMenu ().loginLink ().click ();
-        return new LoginPage();
     }
 }

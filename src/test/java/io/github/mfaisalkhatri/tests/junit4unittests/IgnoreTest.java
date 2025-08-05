@@ -9,14 +9,14 @@ import org.junit.Test;
  **/
 public class IgnoreTest {
 
-    @Ignore("Feature is WIP")
+    @Ignore ("Feature is WIP")
     @Test
-    public void testOne() {
+    public void testOne () {
         System.out.println ("This is test one!");
     }
 
     @Test
-    public void testTwo() {
+    public void testTwo () {
         System.out.println ("This is test two!");
     }
 
